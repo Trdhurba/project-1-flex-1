@@ -14,23 +14,19 @@ itemsForm.addEventListener('submit',createItem)
 
 function createItem() {
   event.preventDefault()
-  //this event handler should create anew items object and persist data
-console.log("submit form!!!") 
-//event.preventDefault()
-//console.log("submit form!!!")
-
- debugger; 
-const name = document.querySelector('#items-input').value
-const quantity = document.querySelector('#quantity-input').value
-  
-//Create an items object
+  console.log("submit form!!!")
+  //this event handler should create an new items object and persist data   
+ debugger;
+ const name = document.querySelector('#items-input').value
+ const quantity = document.querySelector('#quantity-input').value
+  //Create an items object
    const newObj = {
-   name: name,
-   quantity: quantity,
-   completed: false
-   }
-  
+     name: name,
+     quantity: quantity,
+     completed: false
   }
+  
+  
   //persist this data
   
   fetch (BASE_URL, {
@@ -42,7 +38,7 @@ const quantity = document.querySelector('#quantity-input').value
   })
   .then(resp =>resp.json())
   .then(data =>console.log(data))
-
+}
   function renderItem(item) {
 
   }
@@ -84,12 +80,4 @@ const quantity = document.querySelector('#quantity-input').value
 
 
 
-function renderItem(item) {
 
-}
-function updatecompleted(item) {
-
-}
-function getItem() {
-
-}
