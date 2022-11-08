@@ -1,0 +1,59 @@
+{ 
+  "items": [
+  {
+    "id":1,
+    "name": "Hot dog",
+    "quantity": 3,
+    "completed":false
+  },
+  {
+    "id":2,
+    "name": "red bull",
+    "quantity": 4,
+    "completed":false
+  },
+  {
+    "id":3,
+    "name": "wings spicy",
+    "quantity": 5,
+    "completed":false
+  },
+  {
+    "id":4,
+    "name": "Gatorade",
+    "quantity": 5,
+    "completed":false
+  },
+  {
+    "id":5,
+    "name": "Mini beef Taco",
+    "quantity": 8,
+    "completed":false
+  },
+  {
+    "id":6,
+    "name": "pizza",
+    "quantity": 2,
+    "completed":false
+  }
+
+]
+  
+
+
+  
+
+
+
+  
+   
+
+
+  
+  
+
+  
+
+
+
+}
