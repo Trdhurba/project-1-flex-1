@@ -14,18 +14,17 @@ itemsForm.addEventListener('submit',createItem)
 
 function createItem() {
   event.preventDefault()
-  console.log("submit form!!!")
+  //console.log("submit form!!!")
   //this event handler should create an new items object and persist data   
  debugger;
  const name = document.querySelector('#items-input').value
  const quantity = document.querySelector('#quantity-input').value
   //Create an items object
-   const newObj = {
+  const newObj = {
      name: name,
      quantity: quantity,
      completed: false
   }
-  
   
   //persist this data
   
@@ -37,7 +36,7 @@ function createItem() {
     body: JSON.stringify(newObj)
   })
   .then(resp =>resp.json())
-  .then(data =>console.log(data))
+  .then(item =>renderItem(item))
 }
   function renderItem(item) {
 
