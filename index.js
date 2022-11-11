@@ -14,21 +14,24 @@ itemsForm.addEventListener('submit',createItem)
 
 function createItem() {
   event.preventDefault()
-  //console.log("submit form!!!")
-  //this event handler should create an new items object and persist data   
- debugger;
+  
+  //this event handler should create an new items object and persist data 
+  
  const name = document.querySelector('#items-input').value
  const quantity = document.querySelector('#quantity-input').value
+
+  //event.target['items-input'].value
+  //event.target["quantity-input"].value
   //Create an items object
   const newObj = {
-     name: name,
-     quantity: quantity,
-     completed: false
+    name: name,
+    quantity: quantity,
+    completed:false
   }
   
-  //persist this data
+ //persist this data
   
-  fetch (BASE_URL, {
+  fetch(BASE_URL, {
     method: 'post',
     headers: {
       'content-type': 'application/json'
@@ -36,10 +39,21 @@ function createItem() {
     body: JSON.stringify(newObj)
   })
   .then(resp =>resp.json())
-  .then(item =>renderItem(item))
-}
-  function renderItem(item) {
+  .then(item=>renderItem(item))
+  //.then(renderItem ) //refactored line 43
 
+}
+  //Review code, test it.
+
+  function renderItem(item) {
+    const checkBox =document.createElement("input");
+    checkBox.setAttribute("type","checkbox");
+    if (item,completed) {
+      checkBox,checked =true;
+    }
+
+  //fix this code to pass the item object to the event handler
+    checkBox.addEventListener("click",updatecompleted);
   }
   function updatecompleted(item) {
   
