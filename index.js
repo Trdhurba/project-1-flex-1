@@ -7,12 +7,11 @@ const itemsForm =document.querySelector("#items-form")
 
 //test the code.what is the return value and why?
 //console.log(itemsContainer)
-//console.log(itemsForm)
 
 //add an event listener to form calling the event handler,createItem
 itemsForm.addEventListener('submit',createItem)
 
-function createItem() {
+function createItem(event) {
   event.preventDefault()
   
   //this event handler should create an new items object and persist data 
@@ -20,16 +19,11 @@ function createItem() {
  const name = document.querySelector('#items-input').value
  const quantity = document.querySelector('#quantity-input').value
 
-  //event.target['items-input'].value
-  //event.target["quantity-input"].value
-  //Create an items object
-  const newObj = {
-    name: name,
-    quantity: quantity,
-    completed:false
-  }
-  
- //persist this data
+ //event.target['items-input'].value
+ //event.target["quantity-input"].value
+ //Create an items object
+
+//persist this data
   
   fetch(BASE_URL, {
     method: 'post',
@@ -44,7 +38,6 @@ function createItem() {
 
 }
   //Review code, test it.
-
   function renderItem(item) {
     const checkBox =document.createElement("input");
     checkBox.setAttribute("type","checkbox");
