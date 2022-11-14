@@ -19,13 +19,14 @@ function createItem() {
 
  const name = document.querySelector('#items-input').value
  const quantity = document.querySelector('#quantity-input').value
- debugger;
+
 //Create an items object
-const newObj = {
- //name: 
- //quantity: 
- //completed: 
- }
+const newObj = { //plain old javascript object
+ name: name,
+ quantity: quantity, 
+ completed: false 
+}
+
 
 }
 //persist this data
