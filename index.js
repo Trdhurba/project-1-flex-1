@@ -28,7 +28,7 @@ const newObj = { //plain old javascript object
 }
 
 
-}
+console.log ("newObj",newObj)
 //persist this data
 
 fetch (BASE_URL, {
@@ -41,54 +41,19 @@ fetch (BASE_URL, {
 .then(resp =>resp.json())
 .then(data =>console.log(data))
 
-
-
-
-
-
 //review this code.identify that is mising?test your theories!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//persist this data
   
-  fetch(BASE_URL, {
-    method: 'post',
-    headers: {
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify(newitemObj)
-  })
   .then(resp =>resp.json())
   .then(item=>renderItem(item))
+}
   //.then(renderItem ) //refactored line 43
 
 
   //Review code, test it.
   function renderItem(item) {
-    const checkBox =document.createElement("input");
+    console.log('RENDER ITEM')
+    const checkBox = document.createElement("input");
     checkBox.setAttribute("type","checkbox");
     if (item,completed) {
       checkBox,checked =true;
