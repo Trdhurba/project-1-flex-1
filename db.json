@@ -43,14 +43,14 @@
       "id": 7
     },
     {
-      "name": "red bull",
-      "quantity": "4",
+      "name": "hot dog",
+      "quantity": "3",
       "completed": false,
       "id": 8
     },
     {
-      "name": "red bull",
-      "quantity": "4",
+      "name": "hot dog",
+      "quantity": "3",
       "completed": false,
       "id": 9
     },
@@ -59,30 +59,6 @@
       "quantity": "3",
       "completed": false,
       "id": 10
-    },
-    {
-      "name": "red bull",
-      "quantity": "4",
-      "completed": false,
-      "id": 11
-    },
-    {
-      "name": "hot dog",
-      "quantity": "3",
-      "completed": false,
-      "id": 12
-    },
-    {
-      "name": "hot dog",
-      "quantity": "3",
-      "completed": false,
-      "id": 13
-    },
-    {
-      "name": "hot dog",
-      "quantity": "3",
-      "completed": false,
-      "id": 14
     }
   ]
 }

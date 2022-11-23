@@ -56,7 +56,7 @@ fetch (BASE_URL, {
     const checkBox = document.createElement("input");
     checkBox.setAttribute("type","checkbox");
     if (item,completed) {
-      checkBox,checked =true;
+      checkBox,checked = true;
     }
 
   //fix this code to pass the item object to the event handler
