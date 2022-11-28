@@ -39,13 +39,12 @@ fetch (BASE_URL, {
   body: JSON.stringify(newObj)
 })
 .then(resp =>resp.json())
-.then(data =>console.log(data))
+.then(data =>renderItem(data))
 
 //review this code.identify that is mising?test your theories!
 
   
-  .then(resp =>resp.json())
-  .then(item=>renderItem(item))
+
 }
   //.then(renderItem ) //refactored line 43
 
@@ -55,8 +54,8 @@ fetch (BASE_URL, {
     console.log('RENDER ITEM')
     const checkBox = document.createElement("input");
     checkBox.setAttribute("type","checkbox");
-    if (item,completed) {
-      checkBox,checked = true;
+    if (item.completed) {
+      checkBox.checked = true;
     }
 
   //fix this code to pass the item object to the event handler
