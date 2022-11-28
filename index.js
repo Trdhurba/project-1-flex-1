@@ -100,16 +100,14 @@ function getItem() {
 }
 
 function deleteItem(itemId){
- //console.log(listItem)
- // console.log(itemId)
-  fetch(`http://localhost:3000/items  /${item.id}`, {
-    method: 'DELETE',
+  fetch(`http://localhost:3000/items/${item.id}`, {
+    method: "DELETE",
     headers: {
-      'content-Type':'application/json'
+      "content-Type":"application/json"
     }
   })
-   .then(res =>res.json())
-   .then(item =>console.log(item))
+   .then((res) => res.json())
+   .then((item) => console.log(item))
 }
 
 
