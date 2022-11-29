@@ -99,12 +99,12 @@ function getItem() {
   .then(items.forEach(renderItem))
 }
 
-function deleteItem(itemId){
+function deleteItem(item){
   fetch(`http://localhost:3000/items/${item.id}`, {
     method: "DELETE",
     headers: {
       "content-Type":"application/json"
-    }
+    },
   })
    .then((res) => res.json())
    .then((item) => console.log(item))

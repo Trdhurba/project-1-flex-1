@@ -35,7 +35,12 @@
       "name": "pizza",
       "quantity": 2,
       "completed": false
+    },
+    {
+      "name": "wings spicy",
+      "quantity": "5",
+      "completed": false,
+      "id": 7
     }
-
-       ]  
+  ]
 }
