@@ -41,6 +41,9 @@ fetch(BASE_URL, {
 .then(resp =>resp.json())
 .then(item => renderItem(item))
 //.then(renderItem ) //refactored line 42.
+console.log(itemsForm)
+itemsForm.reset()
+
 }
 //review this code.identify that is mising?test your theories!
   function renderItem(item) {
@@ -55,7 +58,7 @@ fetch(BASE_URL, {
     }
   
      //fix this code to pass the item object to the event handler
-    checkBox.addEventListener("click", updateCompleted(item));
+    checkBox.addEventListener("click", () => updateCompleted(item));
     
      //remember that element id's should be unique
     const listItem = document.createElement("li");
