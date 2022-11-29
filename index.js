@@ -55,8 +55,8 @@ fetch(BASE_URL, {
     }
   
      //fix this code to pass the item object to the event handler
-    checkBox.addEventListener("click", () => {updateCompleted(item)
-    });
+    checkBox.addEventListener("click", updateCompleted(item));
+    
      //remember that element id's should be unique
     const listItem = document.createElement("li");
     listItem.id = `items`;
