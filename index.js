@@ -99,7 +99,7 @@ function getItem() {
   .then(items.forEach(renderItem))
 }
 
-function deleteItem(item){
+function deleteItem(item) {
   fetch(`http://localhost:3000/items/${item.id}`, {
     method: "DELETE",
     headers: {
@@ -107,7 +107,7 @@ function deleteItem(item){
     },
   })
    .then((res) => res.json())
-   .then((item) => console.log(item))
+   .then((item) => console.log(item));
 }
 
 
