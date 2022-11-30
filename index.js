@@ -91,7 +91,7 @@ itemsForm.reset()
     headers: {
       'content-type': 'application/json'
     },
-    body: JSON.stringify({ completed: completes})
+    body: JSON.stringify({ completed: completed})
     })
 }  
   //responsible for getting all the resources
