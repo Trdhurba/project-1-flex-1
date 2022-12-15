@@ -35,13 +35,7 @@
       "name": "pizza",
       "quantity": 2,
       "completed": false
-    },
-    {},
-    {
-      "name": "hot dog",
-      "quantity": "3",
-      "completed": true,
-      "id": 7
     }
+  
   ]
 }
