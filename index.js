@@ -98,11 +98,13 @@ itemsForm.reset()
 function getItem() {
   //need to make a fetch request for all items from server
   fetch(BASE_URL)
+  //.then(resp => console.log(resp))
   .then(resp => resp.json())
   .then(items => items.forEach(renderItem))
 }
 
 function deleteItem(item) {
+  
   fetch(`http://localhost:3000/items/${item.id}`, {
     method: "DELETE",
     headers: {
