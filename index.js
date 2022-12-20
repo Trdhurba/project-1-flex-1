@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('RENDER ITEM');
+});
+
 const BASE_URL = "http://localhost:3000/items";
 // select and save the items container element
 const itemsContainer =document.querySelector("#items-container")
@@ -102,6 +106,7 @@ function getItem() {
   .then(resp => resp.json())
   .then(items => items.forEach(renderItem))
 }
+getItem()
 
 function deleteItem(item) {
   
