@@ -63,14 +63,6 @@ itemsForm.reset()
      //fix this code to pass the item object to the event handler
      checkBox.addEventListener("click", () => updatecompleted(item));
     
-    //checkbox.addEventListener('change', function() {
-    // if (this.checked) {
-     //console.log("Checkbox is checked..");
-    //} else {
-    //console.log("Checkbox is not checked..");
-    //}
-    //});
-    
      //remember that element id's should be unique
     const listItem = document.createElement("li");
     listItem.id = `items`;
