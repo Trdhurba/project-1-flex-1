@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-  console.log('RENDER ITEM');
+ console.log ('7ELEVEN GROCERY ITEM');
 });
 const BASE_URL = "http://localhost:3000/items";
 // select and save the items container element
@@ -71,7 +71,7 @@ itemsForm.reset()
     const deleteBttn = document.createElement("button");
     deleteBttn.textContent = "x";
 
-    deleteBttn.addEventListener('click', () => deleteItem(item.id))
+    deleteBttn.addEventListener("click", () => deleteItem(item.id))
   
     listItem.append(checkBox,deleteBttn);
     itemsContainer.appendChild(listItem)
