@@ -59,6 +59,9 @@ itemsForm.reset()
     if (item.completed) {
       checkBox.checked = true;
     }
+    checkBox.addEventListener("change", () => {
+      checkBox.checked && updateCompleted(item);
+    });
   
      //fix this code to pass the item object to the event handler
      checkBox.addEventListener("click", () => updatecompleted(item));
@@ -94,7 +97,7 @@ itemsForm.reset()
     headers: {
       'content-type': 'application/json'
     },
-    body: JSON.stringify({ completed: completed})
+    body: JSON.stringify({ completed: true})
     })
 }  
   //responsible for getting all the resources
