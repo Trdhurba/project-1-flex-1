@@ -1,6 +1,3 @@
-document.addEventListener('DOMContentLoaded', (event) => {
- console.log ('7ELEVEN GROCERY ITEM');
-});
 const BASE_URL = "http://localhost:3000/items";
 // select and save the items container element
 const itemsContainer =document.querySelector("#items-container")
@@ -59,6 +56,9 @@ itemsForm.reset()
     if (item.completed) {
       checkBox.checked = true;
     }
+    checkBox.addEventListener("change", () => {
+      checkBox.checked && updateCompleted(item);
+    });
      //fix this code to pass the item object to the event handler
      checkBox.addEventListener("click", () => updatecompleted(item));
     
