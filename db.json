@@ -1,12 +1,6 @@
 {
   "items": [
     {
-      "id": 2,
-      "name": "red bull",
-      "quantity": 4,
-      "completed": true
-    },
-    {
       "id": 3,
       "name": "wings spicy",
       "quantity": 5,
@@ -23,6 +17,12 @@
       "name": "Mini beef Taco",
       "quantity": 8,
       "completed": true
+    },
+    {
+      "name": "bread",
+      "quantity": "4",
+      "completed": true,
+      "id": 6
     }
   ]
 }

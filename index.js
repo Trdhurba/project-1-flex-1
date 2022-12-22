@@ -57,7 +57,7 @@ itemsForm.reset()
       checkBox.checked = true;
     }
     checkBox.addEventListener("change", () => {
-      checkBox.checked && updateCompleted(item);
+      checkBox.checked && (item);
     });
      //fix this code to pass the item object to the event handler
      checkBox.addEventListener("click", () => updatecompleted(item));
