@@ -17,12 +17,6 @@
       "name": "Mini beef Taco",
       "quantity": 8,
       "completed": true
-    },
-    {
-      "name": "bread",
-      "quantity": "4",
-      "completed": true,
-      "id": 6
     }
   ]
 }
