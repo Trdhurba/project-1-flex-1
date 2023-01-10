@@ -70,7 +70,7 @@ itemsForm.reset()
     const deleteBttn = document.createElement("button");
     deleteBttn.textContent = "x";
 
-    deleteBttn.addEventListener("click", () => deleteItem(item,listItem))
+    deleteBttn.addEventListener("click", (e) => deleteItem(e,item,listItem))
   
     listItem.append(checkBox,deleteBttn);
     itemsContainer.appendChild(listItem)
@@ -106,8 +106,8 @@ function getItem() {
 }
 getItem()
 
-function deleteItem(item,ListItem) {
-  
+function deleteItem(e,item,ListItem) {
+  console.log(ListItem)
   ListItem.remove()
 
   fetch(`${BASE_URL}/${item.id}`, {
