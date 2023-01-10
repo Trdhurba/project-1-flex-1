@@ -70,7 +70,7 @@ itemsForm.reset()
     const deleteBttn = document.createElement("button");
     deleteBttn.textContent = "x";
 
-    deleteBttn.addEventListener("click", () => deleteItem(item.id))
+    deleteBttn.addEventListener("click", () => deleteItem(item,listItem))
   
     listItem.append(checkBox,deleteBttn);
     itemsContainer.appendChild(listItem)
@@ -106,17 +106,22 @@ function getItem() {
 }
 getItem()
 
-function deleteItem(item) {
+function deleteItem(item,ListItem) {
   
-  fetch(`http://localhost:3000/items/${item.id}`, {
+  ListItem.remove()
+
+  fetch(`${BASE_URL}/${item.id}`, {
     method: "DELETE",
-    headers: {
-      "content-Type":"application/json"
-    },
   })
-   .then((res) => res.json())
-   .then((item) => console.log(item));
+
 }
+    //headers: {
+      //"content-Type":"application/json"
+    
+  
+   //.then((res) => res.json())
+   //.then((item) => console.log(item));
+
 
 
 
