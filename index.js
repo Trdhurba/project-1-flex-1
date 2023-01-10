@@ -70,7 +70,7 @@ itemsForm.reset()
     const deleteBttn = document.createElement("button");
     deleteBttn.textContent = "x";
 
-    deleteBttn.addEventListener("click", () => deleteItem(listItem,item.id))
+    deleteBttn.addEventListener("click", () => deleteItem(listItem))
   
     listItem.append(checkBox,deleteBttn);
     itemsContainer.appendChild(listItem)
@@ -111,12 +111,17 @@ function deleteItem(ListItem,item) {
   ListItem.remove()
 
   fetch(`${BASE_URL}/${item.id}`, {
-    method: "DELETE",
+    method: "DELETE"
+   // headers: {
+     // "content-Type":"application/json"
+    
+    
+
+
   })
 
 }
-    //headers: {
-      //"content-Type":"application/json"
+    
     
   
    //.then((res) => res.json())
