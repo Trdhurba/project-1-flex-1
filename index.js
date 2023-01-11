@@ -1,4 +1,5 @@
 const BASE_URL = "http://localhost:3000/items";
+//
 // select and save the items container element
 const itemsContainer =document.querySelector("#items-container")
 
